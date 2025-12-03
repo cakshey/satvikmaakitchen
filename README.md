@@ -1,5 +1,3 @@
-# satvikmaakitchen
+# Frontend
 
-Monorepo scaffold for Satvik Maa Kitchen (Next.js frontend + Express backend).
-
-Generated for GitHub user: cakshey
+Next.js (App Router) frontend for Satvik Kitchen. Place pages under `app/`.
