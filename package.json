@@ -1,0 +1,16 @@
+{
+  "name": "satvikmaakitchen",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace frontend dev\" \"yarn workspace backend dev\"",
+    "build": "yarn workspace frontend build && yarn workspace backend build",
+    "start": "yarn workspace backend start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
