@@ -1,15 +1,16 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
+  "name": "satvikmaakitchen",
   "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "concurrently \"yarn workspace frontend dev\" \"yarn workspace backend dev\"",
+    "build": "yarn workspace frontend build && yarn workspace backend build",
+    "start": "yarn workspace backend start"
   },
-  "dependencies": {
-    "next": "14.0.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+  "devDependencies": {
+    "concurrently": "^8.0.0"
   }
 }
